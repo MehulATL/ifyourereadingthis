@@ -11,6 +11,30 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Screenshot\"><param name=\"android-package\" value=\"com.darktalker.cordova.screenshot.Screenshot\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:maxSdkVersion=\"18\" android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -22,6 +46,12 @@
             "PACKAGE_NAME": "com.mehuljpatel.drake"
         },
         "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.mehuljpatel.drake"
+        },
+        "com.darktalker.cordova.screenshot": {
+            "PACKAGE_NAME": "com.mehuljpatel.drake"
+        },
+        "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.mehuljpatel.drake"
         }
     },
