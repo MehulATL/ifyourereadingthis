@@ -50,35 +50,27 @@ angular.module('app', [
         dfd.resolve(res);
       }
     });
-
+    
     return dfd.promise;
   };
 
   $scope.fuck = function() {
     var sharePopup = $ionicPopup.confirm({
-        title: 'Share with Twitter?',
-      });
-      sharePopup.then(function(res) {
-        if(res) {
-          $timeout(function() {
-            screen()
-            .then(function(imageRes) {
-              var path = 'file://' + imageRes.filePath;
-              share(path);
-            });
-          }, 500);
-        } else {
-          return;
-        }
-      });
-
-
-
-
-
-
-
-
+      title: 'Share with Twitter?',
+    });
+    sharePopup.then(function(res) {
+      if(res) {
+        $timeout(function() {
+          screen()
+          .then(function(imageRes) {
+            var path = 'file://' + imageRes.filePath;
+            share(path);
+          });
+        }, 500);
+      } else {
+        return;
+      }
+    });
   };
 
 });
